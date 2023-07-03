@@ -1,4 +1,3 @@
-95
 import pandas as pd
 import cv2
 import os
@@ -18,7 +17,7 @@ for i in test_img:
     jt = 'train_HNzkrPW (1)/image_data/'+i
     print(jt)
     img = cv2.imread(jt)
-    img_faces = RetinaFace.detect_faces(img,threshold=0.95)
+    img_faces = RetinaFace.detect_faces(img)
     try:
        z=len(img_faces.keys())
     except:
